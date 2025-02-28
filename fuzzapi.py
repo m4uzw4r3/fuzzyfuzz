@@ -2,10 +2,10 @@ import requests
 import sys
 
 
-
+#it will loop thorugh wordlist and search for API
 def fuzzer():
 	for word in sys.stdin:
-		response = requests.get(url=f"http://192.168.1.57/dvwa/index.php/{word}")
+		response = requests.get(url=f"http://enter_domain_name/{word}")
 		if response.status_code == 404:
 			fuzzer()
 	
